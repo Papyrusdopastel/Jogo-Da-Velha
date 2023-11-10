@@ -1,4 +1,4 @@
-const celulas = document.querySelector(".celula");
+const celulas = document.querySelectorAll(".celula");
 
 let checarTurno = true;
 
@@ -9,10 +9,27 @@ const JOGADOR_O = "O";
 
 let jogoAcabou = false;
 
-document.addEventListener ("click", (event) =>) {
+document.addEventListener("click", (event) =>) {
     if (event.target.matches(".celula") && !jogoAcabou) {
         jogar(event.target.id);
 
     }
-};
+}
 
+function jogar(id) {
+    const celular = document.getElementById(id);
+
+    if (celula.textContent === ""){
+        turno = checarTurno ? JOGADOR_X : JOGADOR_O;
+
+        checarTurno = !checarTurno;
+
+        celula.textContent = turno;
+
+        celula.classList.add(turno);
+
+        celula.removeEventListener("click", jogar);
+
+        verificarVencedor(turno);
+    }
+}

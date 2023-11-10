@@ -19,7 +19,7 @@ document.addEventListener("click", (event) =>) {
 function jogar(id) {
     const celular = document.getElementById(id);
 
-    if (celula.textContent === ""){
+    if (celula.textContent === "") {
         turno = checarTurno ? JOGADOR_X : JOGADOR_O;
 
         checarTurno = !checarTurno;
